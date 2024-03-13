@@ -1,5 +1,6 @@
 import React, { createContext, useMemo, useState, useContext } from 'react';
 import noop from 'lodash/noop';
+import Navigate from '../types/types_typescript';
 // Описати тип SelectedMenu: Це має бути об'єкт, який містить id з типом MenuIds
 // Описати тип MenuSelected: Цей тип є об'єктом, що містить selectedMenu
 /**  Описати тип MenuAction: Цей тип являє собою об'єкт з методом onSelectedMenu, 
@@ -83,7 +84,10 @@ function MenuComponent({ menus }: PropsMenu) {
   );
 }
 
-export function ComponentApp() {
+// type Navigate = {
+//   navigate: (url: string) => void;
+// };
+export function ComponentApp({ navigate }: Navigate) {
   const menus: Menu[] = [
     {
       id: 'first',
@@ -101,6 +105,7 @@ export function ComponentApp() {
 
   return (
     <MenuProvider>
+      <button onClick={() => navigate('/')}>Home</button>
       <MenuComponent menus={menus} />
     </MenuProvider>
   );

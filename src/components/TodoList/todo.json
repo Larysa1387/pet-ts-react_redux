@@ -1,0 +1,10 @@
+[
+  { "id": "id-1", "text": "Conect Redux toolkit", "completed": true },
+  {
+    "id": "id-2",
+    "text": "Exem React Router",
+    "completed": false
+  },
+  { "id": "id-3", "text": "Use Redux", "completed": false },
+  { "id": "id-4", "text": "Use React Hooks", "completed": true }
+]

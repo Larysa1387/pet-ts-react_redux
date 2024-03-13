@@ -1,0 +1,29 @@
+.todo_list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0;
+}
+.todo_item {
+  border: 2px solid tomato;
+  border-radius: 20px;
+  padding: 10px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  width: 180px;
+  transition: all 0.5s ease-in-out;
+}
+.todo_item:hover,
+.todo_item:focus {
+  box-shadow: 5px -5px 20px 5px rgb(255 0 0 / 50%);
+  transform: translateY(-5px);
+}
+li:nth-child(even) {
+  background-color: tomato;
+  padding: 20px 0 20px 0;
+}
+li:nth-child(3n + 4) {
+  width: 270px;
+}
